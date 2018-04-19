@@ -2,11 +2,12 @@ import React from 'react';
 import { Col } from 'reactstrap';
 
 const Tabset = props => {
+    const {color, icon} = props.details;
     return(
         <Col md={3}>
             <div className="tabset">
-                <div className={`tab-icon ${ props.details.color ? props.details.color: ''  }`}>
-                    <div className={`fa ${ props.details.icon ? props.details.icon: ''  }`}></div>
+                <div className={`tab-icon ${ color ? color: ''  }`}>
+                    <div className={`fa ${ icon ? icon: ''  }`}></div>
                 </div>
                 <div className="tab-info">
                     <div>{props.details.value}</div>

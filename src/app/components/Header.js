@@ -18,7 +18,6 @@ class Header extends Component {
 
   sidebarCollapsed(event){
       event.preventDefault();
-      console.log(this.props);
       this.props.commonStore.collapseSidebar();
     }
 

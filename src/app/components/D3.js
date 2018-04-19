@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import * as d3 from "d3";
+import * as d3 from 'd3';
 
 class D3 extends Component {
     
@@ -10,19 +10,19 @@ class D3 extends Component {
 
         setContext() {
             return d3.select(this.refs.arc).append('svg')
-                .attr("height","500px")
-                .attr("width","100%");
+                .attr('height','500px')
+                .attr('width','100%');
         }
 
         createBars(context) {
-            return context.selectAll("rect")
+            return context.selectAll('rect')
             .data(this.props.chartdata)
-            .enter().append("rect")
-                .attr("class", "bar")
-                .attr("height", (d, i) => (d * 10))
-                .attr("width","40")
-                .attr("x", (d, i) => (i * 60) + 25)
-                .attr("y", (d, i) => 400 - (d * 10));
+            .enter().append('rect')
+                .attr('class', 'bar')
+                .attr('height', (d, i) => (d * 10))
+                .attr('width','40')
+                .attr('x', (d, i) => (i * 60) + 25)
+                .attr('y', (d, i) => 400 - (d * 10));
         }
 
         render() {
